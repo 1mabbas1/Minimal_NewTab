@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>New Tab</title>
+  <meta charset='utf-8'>
+  <style>
+    @font-face {
+      font-family: 'LT Amber';
+      src: url('fonts/LT Amber Medium.otf') format('truetype');
+      font-weight: normal;
+      font-style: normal;
+    }
+    html, body{
+      font-family: 'LT Amber';
+      height: 50%;
+      min-width: 50%;
+      margin: 0;
+      padding: 0;
+      font-size: 50%;
+    }
+    body{
+      background: #101318;
+      color: #222830;
+    }
+    main {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      min-height:  100vh;
+      flex-direction: column;
+      flex-wrap: wrap;
+    }
+
+    .title {
+      /*line-height:  1;*/
+      margin: 0; padding: 0;
+      text-align: center;
+      -moz-user-select:none;
+      -webkit-user-select:none;
+    }
+    .titleMain {
+      font-weight: 100;
+      font-size: clamp(6rem, -0.875rem + 20vw, 10rem);
+      font-size: 3000%;
+      text-transform: uppercase;
+    }
+    .titleSub {
+      font-weight: 100;
+      font-size: clamp(3rem, -0.875rem + 10vw, 5rem);
+      text-transform: uppercase;
+    }
+    ::selection {
+      background-color: #cc5630;
+    }
+
+    options {
+      position: fixed;
+      top:  0;
+      left:  0;
+      width:  200px;
+      margin:  1rem;
+      padding:  1rem;
+      background-color:  #222830;
+      border:  2px solid #cc5630;
+    }
+    options h2 {
+      text-align: center;
+      color:  #ffffff;
+      text-transform: uppercase;
+      -moz-user-select:none;
+      -webkit-user-select:none;
+    }
+    options button {
+    box-shadow:inset 0px 1px 0px 0px #ffffff;
+    width:100%;
+  	background:linear-gradient(to bottom, #ffffff 5%, #f6f6f6 100%);
+  	background-color:#ffffff;
+  	border-radius:6px;
+  	border:1px solid #dcdcdc;
+  	display:inline-block;
+  	cursor:pointer;
+  	color:#666666;
+  	font-family:Arial;
+  	font-size:15px;
+  	font-weight:bold;
+  	padding:6px 24px;
+  	text-decoration:none;
+  	text-shadow:0px 1px 0px #ffffff;
+    }
+
+    options input {
+    box-shadow:inset 0px 1px 0px 0px #ffffff;
+    width:75%;
+  	background:linear-gradient(to bottom, #ffffff 5%, #f6f6f6 100%);
+  	background-color:#ffffff;
+  	border-radius:6px;
+  	border:1px solid #dcdcdc;
+  	display:inline-block;
+  	cursor:pointer;
+  	color:#b9b8b8;
+  	font-family:Arial;
+  	font-size:15px;
+  	font-weight:bold;
+  	padding:6px 24px;
+  	text-decoration:none;
+  	text-shadow:0px 1px 0px #ffffff;
+  </style>
+</head>
+
+<body>
+  <main id='main'>
+    <h1 class='title titleMain' id='titleMain' unselectable='on'></h1>
+    <h2 class='title titleSub' id='titleSub' unselectable='on'></h2>
+  </main>
+  <options id='options' style='display: none;'>
+    <h2>Options</h2>
+
+
+  <p>
+    <p>
+      <button id='colorBackground'>Background Color</button>
+    </p>
+    <p>
+      <button id='colorText'>Text Color</button>
+    </p>
+    <p>
+      <button id='resetAll'>Reset<br></button>
+    </p>
+    <p>
+      <button id='closeOptions'>Close Options</button>
+    </p>
+  </options>
+  <script src='vendors/vanilla-picker.min.js'></script>
+  <script src='scripts/app.js'></script>
+
+</body>
+</html>
